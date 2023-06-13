@@ -23,7 +23,7 @@ let null1: null = null;
 // undefined
 let unde1: undefined = undefined;
 
-let num_A: number = null;
+// let num_A: number = null;
 
 
 // 리터럴 타입
