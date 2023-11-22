@@ -68,6 +68,24 @@ function login(user: User) {
 //     };
 // };
 
+// const loading: AsyncTask = {
+//     state: "LOADING",
+// };
+
+// const failed: AsyncTask = {
+//     state: "FAILED",
+//     error: {
+//         message: "오류 발생 원인은 ~~",
+//     },
+// };
+
+// const success: AsyncTask = {
+//     state: "SUCCESS",
+//     response: {
+//         data: "데이터 --",
+//     },
+// };
+
 type LoadingTask = {
     state: "LOADING";
 }
@@ -108,25 +126,3 @@ function processResult(task: AsyncTask) {
         }
     }
 }
-
-const loading: AsyncTask = {
-    state: "LOADING",
-};
-
-const failed: AsyncTask = {
-    state: "FAILED",
-    error: {
-        message: "오류 발생 원인은 ~~",
-    },
-};
-
-const success: AsyncTask = {
-    state: "SUCCESS",
-    response: {
-        data: "데이터 --",
-    },
-};
-
-
-
-

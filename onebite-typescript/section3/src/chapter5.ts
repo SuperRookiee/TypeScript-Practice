@@ -5,20 +5,20 @@
 let a = 10;
 let b = "hello";
 let c = {
-    id : 1,
-    name: "이정환",
+    id: 1,
+    name: "고현욱",
     profile: {
         nickname: "superrookiee"
     },
     url: ["https://superrookie.com"],
 };
 
-let {id, name, profile} = c;
+let { id, name, profile } = c;
 
 let [one, two, three] = [1, "hello", true];
 
 
-function func(message="hello") {
+const func = (message = "hello") => {
     return "hello";
 }
 

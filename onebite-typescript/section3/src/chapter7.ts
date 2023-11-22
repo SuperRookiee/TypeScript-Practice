@@ -13,7 +13,7 @@ type Person = {
 //value => string : toUpperCase
 //value => Date : getTime
 //value => Person : name은 age살 입니다.
-function func(value: number | string | Date | null | Person) {
+const func = (value: number | string | Date | null | Person) => {
     if(typeof value === 'number') {
         console.log(value.toFixed());
     }
