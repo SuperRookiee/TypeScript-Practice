@@ -10,7 +10,13 @@ export const MainContainer = styled(PageContainer)`
         width: 300px;
 
         a {
-            padding: 0.6em 1.2em;
+            padding: 0.5em 1em;
+            display: block;
+
+            &:hover {
+                color: white;
+                transition: all 1ms;
+            }
         }
     }
 `
