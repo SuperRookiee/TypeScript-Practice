@@ -1,10 +1,7 @@
-// ReactRND.style.ts
-
 import styled from 'styled-components';
-import { PageContainer } from "./Common.style";
 import { Rnd } from "react-rnd";
 
-export const RNDContainer = styled(PageContainer)`
+export const RNDContainer = styled.main`
   align-items: center;
 `;
 

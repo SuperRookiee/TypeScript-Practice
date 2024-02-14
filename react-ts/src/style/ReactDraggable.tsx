@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { PageContainer } from "./Common.style";
 
-export const DNDContainer = styled(PageContainer)`
+export const DNDContainer = styled.main`
   align-items: center;
 `;
 

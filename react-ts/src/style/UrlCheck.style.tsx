@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { PageContainer } from "./Common.style";
 
-export const UrlCheckContainer = styled(PageContainer)`
+export const UrlCheckContainer = styled.main`
   align-items: center;
 `;
 

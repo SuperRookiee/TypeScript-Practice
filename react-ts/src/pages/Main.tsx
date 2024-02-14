@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import * as Styled from "../style/Main.style";
 
-const openNewWindow = () => {
-    window.open('UrlCheck_Popup', '_blank', 'width=500, height=500');
-  };
-
 function Main() {
     return (
         <Styled.MainContainer>
@@ -13,7 +9,12 @@ function Main() {
             <button><Link to={`ReactRND`}>React RND</Link></button>
             <button><Link to={`ReactDraggable`}>React Draggable</Link></button>
             <button><Link to={`UrlCheck`}>Url Check</Link></button>
-            <button onClick={openNewWindow}>Url Check 새창</button>
+            <button><Link to={`Popup`}>팝업</Link></button>
+            <button><Link to={`ReactCanvasDraw`}>React Canvas Draw</Link></button>
+            <button><Link to={`ReactSketchCanvas`}>React Sketch Canvas</Link></button>
+            <button><Link to={`PinchZoom`}>Pinch Zoom</Link></button>
+            <button><Link to={`CreatePortal`}>CreatePortal (Modal)</Link></button>
+            <button><Link to={`ScrollEffect`}>Scroll Effect</Link></button>
         </Styled.MainContainer>
     )
 }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { PageContainer } from "./Common.style";
 
-export const MainContainer = styled(PageContainer)`
+export const MainContainer = styled.main`
     justify-content: center;
     align-items: center;
 

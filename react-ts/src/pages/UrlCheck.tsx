@@ -1,8 +1,8 @@
 import * as Styled from '../style/UrlCheck.style'
 import ReactLinkify from "react-linkify";
 
-const contents = 
-`  https://www.naver.com URL
+const contents =
+    `  https://www.naver.com URL
 https://www.naver.com주소
 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
   안녕하세요    반가워요~
@@ -21,7 +21,7 @@ function UrlCheck() {
                         <div>{content}</div>
                     </ReactLinkify>
                 ))}
-                
+
             </Styled.URLLink>
         </Styled.UrlCheckContainer>
     )
