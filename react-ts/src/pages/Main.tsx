@@ -15,6 +15,8 @@ function Main() {
             <button><Link to={`PinchZoom`}>Pinch Zoom</Link></button>
             <button><Link to={`CreatePortal`}>CreatePortal (Modal)</Link></button>
             <button><Link to={`ScrollEffect`}>Scroll Effect</Link></button>
+            <button><Link to={`ReactDNDGrid`}>React DND Grid</Link></button>
+            <button><Link to={`DropDND`}>DropDND</Link></button>
         </Styled.MainContainer>
     )
 }

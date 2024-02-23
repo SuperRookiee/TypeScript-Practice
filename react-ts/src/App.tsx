@@ -13,6 +13,8 @@ import ReactSketchCanvas from "./pages/ReactSketchCanvas";
 import PinchZoom from "./pages/PinchZoom";
 import CreatePortal from "./pages/CreatePortal";
 import ScrollEffect from "./pages/ScrollEffect";
+import ReactDNDGrid from "./pages/ReactDNDGrid";
+import DropDND from "./pages/DropDND";
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
         <Route path='PinchZoom' element={<PinchZoom />} />
         <Route path='CreatePortal' element={<CreatePortal />} />
         <Route path='ScrollEffect' element={<ScrollEffect />} />
+        <Route path='ReactDNDGrid' element={<ReactDNDGrid />} />
+        <Route path='DropDND' element={<DropDND />} />
       </Route>
       <Route path='PopupPage' element={<PopupPage />} />
     </Routes>
