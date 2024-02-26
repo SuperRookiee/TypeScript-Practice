@@ -97,7 +97,7 @@ function ReactDNDGrid() {
                     >
                         {leftItems.map(item => (
                             <GridItem key={item.name}>
-                                <div className="grid-item" onClick={() => handleItemClick('left', item)}>
+                                <div className="grid-item">
                                     <div className="grid-item-content">
                                         {item.name}
                                     </div>
@@ -113,7 +113,7 @@ function ReactDNDGrid() {
                     >
                         {rightItems.map(item => (
                             <GridItem key={item.name}>
-                                <div className="grid-item" onClick={() => handleItemClick('right', item)}>
+                                <div className="grid-item">
                                     <div className="grid-item-content">
                                         {item.name}
                                     </div>
