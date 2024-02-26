@@ -61,30 +61,6 @@ function ReactDNDGrid() {
         }
     }
 
-    function handleItemClick(sourceId, item) {
-        if (sourceId === 'left') {
-            const index = leftItems.findIndex(i => i.id === item.id);
-            if (index !== -1) {
-                const updatedItems = [...leftItems];
-                updatedItems.splice(index, 1);
-                setLeftItems(updatedItems);
-                setLeftCount(updatedItems.length);
-                setRightItems([...rightItems, item]);
-                setRightCount(rightItems.length + 1);
-            }
-        } else {
-            const index = rightItems.findIndex(i => i.id === item.id);
-            if (index !== -1) {
-                const updatedItems = [...rightItems];
-                updatedItems.splice(index, 1);
-                setRightItems(updatedItems);
-                setRightCount(updatedItems.length);
-                setLeftItems([...leftItems, item]);
-                setLeftCount(leftItems.length + 1);
-            }
-        }
-    }
-
     return (
         <main id='Grid'>
             <GridContextProvider onChange={onChange}>
