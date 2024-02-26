@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
-    justify-content: center;
     align-items: center;
+    
+    & > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
 
     button {
         margin-top: 1rem;

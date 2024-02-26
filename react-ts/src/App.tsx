@@ -15,6 +15,7 @@ import CreatePortal from "./pages/CreatePortal";
 import ScrollEffect from "./pages/ScrollEffect";
 import ReactDNDGrid from "./pages/ReactDNDGrid";
 import DropDND from "./pages/DropDND";
+import OXCustom from "./pages/OXCustom";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='ScrollEffect' element={<ScrollEffect />} />
         <Route path='ReactDNDGrid' element={<ReactDNDGrid />} />
         <Route path='DropDND' element={<DropDND />} />
+        <Route path='OXCustom' element={<OXCustom />} />
       </Route>
       <Route path='PopupPage' element={<PopupPage />} />
     </Routes>
