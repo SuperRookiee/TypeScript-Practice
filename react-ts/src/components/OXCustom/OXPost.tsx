@@ -18,9 +18,9 @@ interface IOXPostProps {
 function OXPost({ posts, area, handleDragStop }: IOXPostProps) {
     return (
         <Styled.Zone $area={area}>
-            {posts.map((post, i) => (
+            {posts.map(post => (
                 <Styled.RND
-                    key={`${post.id}_${i}`}
+                    key={`${post.id}_${post.x}_${post.y}`}
                     $area={area}
                     bounds={`#OXContainer`}
                     enableResizing={false}
@@ -30,7 +30,7 @@ function OXPost({ posts, area, handleDragStop }: IOXPostProps) {
                         width: 200,
                         height: 120
                     }}
-                    onDragStop={(e, d) => handleDragStop(post, d.x, d.y, area)}
+                    onDragStop={(_e, d) => handleDragStop(post, d.x, d.y, area)}
                 >
                     <span>{post.title}</span>
                     <div>{post.contents}</div>
