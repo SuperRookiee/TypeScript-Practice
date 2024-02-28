@@ -1,19 +1,18 @@
-import * as Styled from '../../style/OXCustom.style';
+import * as Styled from '../../style/SectionDrag.style';
 import {Post} from '../../types/Interfaces.ts';
 
-interface IOXPostProps {
+interface ISectionPostProps {
     posts: Post[];
-    area: number;
-    handleDragStop: (post: Post, x: number, y: number, area: number) => void;
+    handleDragStop: (post: Post, x: number, y: number) => void;
 }
 
-function OXPost({ posts, area, handleDragStop }: IOXPostProps) {
+function SectionPost({posts, handleDragStop}: ISectionPostProps) {
     return (
-        <Styled.Zone $area={area}>
+        <>
             {posts.map(post => (
                 <Styled.RND
+                    $area={post.area}
                     key={`${post.id}_${post.uuid}`}
-                    $area={area}
                     bounds={`#OXContainer`}
                     enableResizing={false}
                     default={{
@@ -22,14 +21,15 @@ function OXPost({ posts, area, handleDragStop }: IOXPostProps) {
                         width: 200,
                         height: 120
                     }}
-                    onDragStop={(_e, d) => handleDragStop(post, d.x, d.y, area)}
+                    onDragStop={(_e, d) => handleDragStop(post, d.x, d.y)}
                 >
                     <span>{post.title}</span>
                     <div>{post.contents}</div>
+                    <div>{post.area}</div>
                 </Styled.RND>
             ))}
-        </Styled.Zone>
+        </>
     );
 };
 
-export default OXPost;
+export default SectionPost;
