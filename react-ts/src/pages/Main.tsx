@@ -19,6 +19,7 @@ function Main() {
                 <button><Link to={`ReactDNDGrid`}>React DND Grid</Link></button>
                 <button><Link to={`DropDND`}>DropDND</Link></button>
                 <button><Link to={`OXCustom`}>OX Custom</Link></button>
+                <button><Link to={`SectionDrag`}>SectionDrag</Link></button>
             </div>
         </Styled.MainContainer>
     )

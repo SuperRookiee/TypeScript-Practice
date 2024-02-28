@@ -16,6 +16,7 @@ import ScrollEffect from "./pages/ScrollEffect";
 import ReactDNDGrid from "./pages/ReactDNDGrid";
 import DropDND from "./pages/DropDND";
 import OXCustom from "./pages/OXCustom";
+import SectionDrag from "./pages/SectionDrag";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Route path='ReactDNDGrid' element={<ReactDNDGrid />} />
         <Route path='DropDND' element={<DropDND />} />
         <Route path='OXCustom' element={<OXCustom />} />
+        <Route path='SectionDrag' element={<SectionDrag />} />
       </Route>
       <Route path='PopupPage' element={<PopupPage />} />
     </Routes>

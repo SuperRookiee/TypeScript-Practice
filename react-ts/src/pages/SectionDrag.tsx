@@ -4,7 +4,7 @@ import {Post} from '../types/OXCustom';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-const viewPortWidthHalf = 1914 / 2;
+const viewPortWidthHalf = 1914 / 3;
 const postHalf = 200 / 2;
 
 const DBData: Post[] = [
@@ -14,6 +14,9 @@ const DBData: Post[] = [
     { id: 4, area: 2, x: 0, y: 200, title: "고양이", contents: "야옹" },
     { id: 5, area: 2, x: 150, y: 500, title: "강아지", contents: "멍멍" },
     { id: 6, area: 2, x: 700, y: 400, title: "돼지", contents: "꿀꿀" },
+    { id: 7, area: 3, x: 70, y: 50, title: "말", contents: "히이힝" },
+    { id: 8, area: 3, x: 130, y: 500, title: "늑대", contents: "아~우~" },
+    { id: 9, area: 3, x: 200, y: 400, title: "사람", contents: "하이" },
 ]
 
 function OXCustom() {
@@ -26,12 +29,12 @@ function OXCustom() {
 
         switch (area) {
             case 1:
-                //선을 넘는 경우
+                //선을 넘는 경우 
                 if (x >= viewPortWidthHalf) {
                     newX = x - viewPortWidthHalf;
                     newArea = 2;
                 }
-                //절반보다 많이 넘는 경우
+                //절반보다 많이 넘는 경우 
                 else if (x >= viewPortWidthHalf - postHalf) {
                     newX = 0;
                     newArea = 2;
@@ -42,12 +45,12 @@ function OXCustom() {
                 }
                 break;
             case 2:
-                //선을 넘는 경우
+                //선을 넘는 경우 
                 if (x < -200) {
                     newX = viewPortWidthHalf + x;
                     newArea = 1;
                 }
-                //절반보다 많이 넘는 경우
+                //절반보다 많이 넘는 경우 
                 else if (x < -100) {
                     newX = viewPortWidthHalf - 200;
                     newArea = 1;
@@ -70,7 +73,7 @@ function OXCustom() {
         <>
             <button onClick={() => console.log(posts)}>현재값</button>
             <Styled.OXContainer id='OXContainer'>
-                {[1, 2].map((area) => (
+                {[1, 2, 3].map((area) => (
                     <OXPost key={area} posts={posts.filter(p => p.area === area)} area={area} handleDragStop={handleDragStop} />
                 ))}
             </Styled.OXContainer>

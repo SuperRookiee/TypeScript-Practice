@@ -1,13 +1,5 @@
 import * as Styled from '../../style/OXCustom.style';
-
-type Post = {
-    id: number;
-    area: number;
-    x: number;
-    y: number;
-    title: string;
-    contents: string;
-};
+import {Post} from '../../types/OXCustom';
 
 interface IOXPostProps {
     posts: Post[];
@@ -20,7 +12,7 @@ function OXPost({ posts, area, handleDragStop }: IOXPostProps) {
         <Styled.Zone $area={area}>
             {posts.map(post => (
                 <Styled.RND
-                    key={`${post.id}_${post.x}_${post.y}`}
+                    key={`${post.id}_${post.uuid}`}
                     $area={area}
                     bounds={`#OXContainer`}
                     enableResizing={false}

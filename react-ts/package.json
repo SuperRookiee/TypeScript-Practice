@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/react-canvas-draw": "^1.2.3",
     "@types/react-linkify": "^1.0.4",
+    "@types/uuid": "^9.0.8",
     "react": "^18.2.0",
     "react-canvas-draw": "^1.2.1",
     "react-dnd": "^16.0.1",
@@ -26,7 +27,8 @@
     "react-router-dom": "^6.19.0",
     "react-sketch-canvas": "^6.2.0",
     "sass": "^1.69.5",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
