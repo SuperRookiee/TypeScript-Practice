@@ -80,7 +80,7 @@ function SectionDrag() {
             <label>Points: </label>
             <input type="number" value={area.length} min={1}
                    onChange={(e) => handleChangeArea(parseInt(e.target.value))}/>
-            <Styled.DragSection id='OXContainer' $count={area.length}>
+            <Styled.DragSection id='OXContainer'>
                 {[...Array(area.length - 1)].map((_, index) =>
                     <Styled.SectionDivider key={index} $width={viewPortWidth} $length={area.length} $index={index + 1}/>
                 )}

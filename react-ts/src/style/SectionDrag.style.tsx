@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Rnd} from 'react-rnd';
 
-export const DragSection = styled.main<{ $count: number }>`
+export const DragSection = styled.main`
     width: 1914px;
     border: 1px solid white;
     display: flex;
