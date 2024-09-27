@@ -30,7 +30,7 @@ export const Block = styled.div<{ $height: number}>`
     justify-content: center;
     cursor: move;
     transition: transform 0.2s ease;
-    height: ${(props) => `${props.$height}px`};
+    grid-row: ${(props) => `span ${props.$height}`};
 
     &:hover {
         background-color: #4a4a4a;
