@@ -1,12 +1,12 @@
 import * as Styled from '../../style/SectionDrag.style';
-import {Post} from '../../types/Interfaces.ts';
+import { Post } from '../../types/Post.ts';
 
 interface ISectionPostProps {
     posts: Post[];
     handleDragStop: (post: Post, x: number, y: number) => void;
 }
 
-function SectionPost({posts, handleDragStop}: ISectionPostProps) {
+function SectionPost({ posts, handleDragStop }: ISectionPostProps) {
     return (
         <>
             {posts.map(post => (

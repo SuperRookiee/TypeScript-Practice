@@ -1,0 +1,30 @@
+import { useState } from "react";
+import SortableList from "../components/SortBlock/SortableList";
+import * as Styled from '../style/SortBlock.style';
+import { Block } from "../types/Block";
+
+function SortBlock() {
+    const [blocks, setBlocks] = useState<Block[]>([
+        { value: "Block 1", height: 150 },
+        { value: "Block 2", height: 100 },
+        { value: "Block 3", height: 200 },
+        { value: "Block 4", height: 520 },
+        { value: "Block 5", height: 180 },
+        { value: "Block 6", height: 140 },
+    ]);
+
+    const onSortEnd = (newBlocks: Block[]) => {
+        setBlocks(newBlocks);
+    };
+
+    return (
+        <main>
+            <Styled.SortBlockContainer>
+                <h1>Sortable List</h1>
+                <SortableList blocks={blocks} onSortEnd={onSortEnd} />
+            </Styled.SortBlockContainer>
+        </main>
+    );
+}
+
+export default SortBlock;

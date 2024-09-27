@@ -1,5 +1,5 @@
 import * as Styled from '../../style/OXCustom.style';
-import {Post} from '../../types/Interfaces.ts';
+import { Post } from '../../types/Post.ts';
 
 interface IOXPostProps {
     posts: Post[];

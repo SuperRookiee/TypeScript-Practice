@@ -18,6 +18,7 @@ import DropDND from "./pages/DropDND";
 import OXCustom from "./pages/OXCustom";
 import SectionDrag from "./pages/SectionDrag";
 import MindMap from "./pages/MindMap";
+import SortBlock from "./pages/SortBlock";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='OXCustom' element={<OXCustom />} />
         <Route path='SectionDrag' element={<SectionDrag />} />
         <Route path='MindMap' element={<MindMap />} />
+        <Route path='SortBlock' element={<SortBlock />} />
       </Route>
       <Route path='PopupPage' element={<PopupPage />} />
     </Routes>

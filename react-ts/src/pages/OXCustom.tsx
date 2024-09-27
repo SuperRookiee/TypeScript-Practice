@@ -1,6 +1,6 @@
 import * as Styled from '../style/OXCustom.style';
 import OXPost from '../components/OXCustom/OXPost';
-import {Post} from '../types/Interfaces.ts';
+import { Post } from '../types/Post.ts';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
