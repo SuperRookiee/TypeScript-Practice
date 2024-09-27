@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
+export const Title = styled.h1`
+    padding: 1rem 3rem;
+`;
+
 export const SortBlockContainer = styled.section`
     position: relative;
     resize: both;
-    overflow: hidden;
-    min-width: 200px;
-    min-height: 200px;
+    overflow-y: scroll;
+    min-width: 400px;
+    min-height: 50vh;
     border: 3px solid white;
     margin: 0 3rem;
     padding: 1rem 3rem;
-
-    & > h1 {
-        margin-bottom: 3rem;
-        white-space: pre;
-    }
 `;
 
 export const Blocks = styled.div`

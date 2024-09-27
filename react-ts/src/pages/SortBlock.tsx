@@ -19,8 +19,8 @@ function SortBlock() {
 
     return (
         <main>
+            <Styled.Title>Sortable List</Styled.Title>
             <Styled.SortBlockContainer>
-                <h1>Sortable List</h1>
                 <SortableList blocks={blocks} onSortEnd={onSortEnd} />
             </Styled.SortBlockContainer>
         </main>
