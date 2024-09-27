@@ -49,8 +49,13 @@ export const FlowMenu = styled.div`
     }
 `;
 
-
 export const NodeEditMenu= styled(FlowMenu)``
 
-
 export const EdgeMenu = styled(FlowMenu)``
+
+export const Post = styled.div`
+    div {
+        background: white;
+        color: black;
+    }
+`

@@ -1,27 +1,26 @@
 import {SetStateAction, useCallback, useState} from "react";
-import ReactFlow, {ReactFlowProvider, addEdge, MiniMap, Controls, Background, useNodesState, useEdgesState, Connection, Edge} from 'reactflow';
+import ReactFlow, {ReactFlowProvider, addEdge, MiniMap, Controls, Background, useNodesState, useEdgesState, Connection, Node, Edge, NodeResizeControl} from 'reactflow';
 import 'reactflow/dist/style.css';
 import * as Styled from "../../style/MindMap.style.tsx";
-
-interface Node {
-    id: string,
-    type?: string,
-    data: { label: string },
-    position: { x: number, y: number },
-}
+import CustomResizerNode from './CustomResizerNode';
 
 const initialNodes: Node[] = [
     {id: '1', type: 'input', data: {label: 'Root Node'}, position: {x: 250, y: 0}},
+    {id: '2', type: 'CustomResizerNode', data: {label: 'Root Node'}, position: {x: 250, y: 0}, style:{background: `url(https://class-board.s3.ap-northeast-2.amazonaws.com/upload/default/41b1ce1a-2b06-4b81-908d-ce2820565e02.jpg)`, backgroundSize: 'cover'}},
     // {id: '2', data: {label: 'Child Node 1'}, position: {x: 100, y: 100}},
     // {id: '3', data: {label: 'Child Node 2'}, position: {x: 400, y: 100}},
 ];
 
-const initialEdges: [] = [
-    // {id: 'e1-2', source: '1', target: '2', animated: false},
+const initialEdges: Edge[] = [
+    {id: 'e1-2', source: '1', target: '2', animated: false},
     // {id: 'e1-3', source: '1', target: '3', animated: true},
 ];
 
-const Flow = () => {
+const nodeTypes = {
+    CustomResizerNode
+  };
+
+function Flow() {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [editingNode, setEditingNode] = useState<Node | null>(null);
@@ -39,8 +38,8 @@ const Flow = () => {
     };
 
     const updateNodeContent = (id: string, content: string) => {
-        setNodes(nds =>
-            nds.map(node =>
+        setNodes(prevNodes =>
+            prevNodes.map(node =>
                 node.id === id ? {...node, data: {...node.data, label: content}} : node
             )
         );
@@ -103,6 +102,7 @@ const Flow = () => {
             <Styled.FlowContainer>
                 <button onClick={addNode}>노드 추가</button>
                 <ReactFlow
+                    nodeTypes={nodeTypes}
                     nodes={nodes}
                     edges={edges}
                     onNodesChange={onNodesChange}
@@ -110,7 +110,6 @@ const Flow = () => {
                     onConnect={connectEdge}
                     onEdgeClick={clickEdge}
                     onNodeDoubleClick={doubleClickNode}
-                    attributionPosition="bottom-left"
                     fitView
                 >
                     <MiniMap/>
@@ -139,6 +138,6 @@ const Flow = () => {
             </Styled.FlowContainer>
         </ReactFlowProvider>
     );
-};
+}
 
 export default Flow;
