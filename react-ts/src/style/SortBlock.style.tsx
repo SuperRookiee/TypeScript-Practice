@@ -29,8 +29,8 @@ export const Block = styled.div<{ $height: number}>`
     align-items: center;
     justify-content: center;
     cursor: move;
-    transition: transform 0.2s ease;
     grid-row: ${(props) => `span ${props.$height}`};
+    transition: transform 1s ease, grid-row 1s ease;
 
     &:hover {
         background-color: #4a4a4a;
